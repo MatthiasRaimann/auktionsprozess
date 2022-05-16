@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1oo5p67" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1oo5p67" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
   <bpmn:collaboration id="Collaboration_0o6zyva">
-    <bpmn:participant id="Participant_0jcjq2x" name="Artikelabwicklung" processRef="Process_0z2vygq" />
+    <bpmn:participant id="Participant_0jcjq2x" name="Artikelabwicklung" processRef="Auktionsabwicklungsprozess" />
     <bpmn:participant id="Participant_0ev9g3w" name="Kunde" />
     <bpmn:messageFlow id="Flow_0vqir19" name="Storno" sourceRef="Participant_0ev9g3w" targetRef="Event_0tr23rv" />
     <bpmn:messageFlow id="Flow_1esk91j" name="Versandt-bestätigung" sourceRef="Activity_1eavede" targetRef="Participant_0ev9g3w" />
@@ -9,7 +9,7 @@
     <bpmn:messageFlow id="Flow_0qjwc3y" name="Rechnungs-rückzug-bestätigung" sourceRef="Activity_101mw8a" targetRef="Participant_0ev9g3w" />
     <bpmn:messageFlow id="Flow_0nbbp96" name="Rechnung" sourceRef="Activity_1pql2cn" targetRef="Participant_0ev9g3w" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_0z2vygq" isExecutable="true">
+  <bpmn:process id="Auktionsabwicklungsprozess" isExecutable="true">
     <bpmn:laneSet id="LaneSet_0wb4wqv">
       <bpmn:lane id="Lane_1t3c2gl" name="Logistiker">
         <bpmn:flowNodeRef>Activity_0sgpvhj</bpmn:flowNodeRef>
