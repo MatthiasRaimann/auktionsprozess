@@ -59,7 +59,7 @@
           <camunda:inputParameter name="${neukaufpreis}">${neukaufpreis}</camunda:inputParameter>
           <camunda:inputParameter name="${herstellungsdatum}">${herstellungsdatum}</camunda:inputParameter>
           <camunda:inputParameter name="${abnutzung}">${abnutzung}</camunda:inputParameter>
-          <camunda:outputParameter name="kostenExpertise">${decisionResult.getFirstResult.().getkundenKosten()}</camunda:outputParameter>
+          <camunda:outputParameter name="kostenExpertise">${decisionResult.getFirstResult().getkundenKosten()}</camunda:outputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_01efe2m</bpmn:incoming>

@@ -5,27 +5,27 @@
   </bpmn:collaboration>
   <bpmn:process id="Process_01tva3y" isExecutable="true">
     <bpmn:sequenceFlow id="Flow_112l3of" sourceRef="StartEvent_1" targetRef="Activity_0ftg6tc" />
-    <bpmn:task id="Activity_1j08dox" name="Auktionsabwicklungsprozess">
-      <bpmn:incoming>Flow_1q2cxwz</bpmn:incoming>
-      <bpmn:outgoing>Flow_0dz6a0g</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="Flow_1q2cxwz" sourceRef="Activity_0ftg6tc" targetRef="Activity_1j08dox" />
     <bpmn:sequenceFlow id="Flow_0dz6a0g" sourceRef="Activity_1j08dox" targetRef="Activity_1oeqmh6" />
     <bpmn:endEvent id="Event_1i6cs6h" name="Auktion abgeschlossen">
       <bpmn:incoming>Flow_1qjpnnc</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1qjpnnc" sourceRef="Activity_1oeqmh6" targetRef="Event_1i6cs6h" />
-    <bpmn:task id="Activity_1oeqmh6" name="Auktionsabwicklungsprozess">
-      <bpmn:incoming>Flow_0dz6a0g</bpmn:incoming>
-      <bpmn:outgoing>Flow_1qjpnnc</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:startEvent id="StartEvent_1" name="Anfrage eingagangen">
       <bpmn:outgoing>Flow_112l3of</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:callActivity id="Activity_0ftg6tc" name="Auktionsvorbereitungsprozess">
+    <bpmn:userTask id="Activity_0ftg6tc" name="Auktionsvorbereitungsprozess">
       <bpmn:incoming>Flow_112l3of</bpmn:incoming>
       <bpmn:outgoing>Flow_1q2cxwz</bpmn:outgoing>
-    </bpmn:callActivity>
+    </bpmn:userTask>
+    <bpmn:manualTask id="Activity_1j08dox" name="Auktionsabwicklungsprozess">
+      <bpmn:incoming>Flow_1q2cxwz</bpmn:incoming>
+      <bpmn:outgoing>Flow_0dz6a0g</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Activity_1oeqmh6" name="Auktionsabwicklungsprozess">
+      <bpmn:incoming>Flow_0dz6a0g</bpmn:incoming>
+      <bpmn:outgoing>Flow_1qjpnnc</bpmn:outgoing>
+    </bpmn:manualTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1w2k2u0">
@@ -49,18 +49,11 @@
         <di:waypoint x="215" y="177" />
         <di:waypoint x="270" y="177" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Activity_1j08dox_di" bpmnElement="Activity_1j08dox">
-        <dc:Bounds x="430" y="137" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1i6cs6h_di" bpmnElement="Event_1i6cs6h">
         <dc:Bounds x="752" y="159" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="733" y="202" width="74" height="27" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_05cl63m_di" bpmnElement="Activity_1oeqmh6">
-        <dc:Bounds x="590" y="137" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_00pg957_di" bpmnElement="StartEvent_1">
         <dc:Bounds x="179" y="159" width="36" height="36" />
@@ -68,8 +61,14 @@
           <dc:Bounds x="165" y="202" width="64" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1xellpf_di" bpmnElement="Activity_0ftg6tc">
+      <bpmndi:BPMNShape id="Activity_0ifc893_di" bpmnElement="Activity_0ftg6tc">
         <dc:Bounds x="270" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_080mtqm_di" bpmnElement="Activity_1j08dox">
+        <dc:Bounds x="430" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1f5qssr_di" bpmnElement="Activity_1oeqmh6">
+        <dc:Bounds x="590" y="137" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

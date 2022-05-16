@@ -1,4 +1,4 @@
-package de.auktionen.services;
+package de.auktionen.auktionsprozess.services;
 
 import java.util.HashMap;
 import java.util.Map;

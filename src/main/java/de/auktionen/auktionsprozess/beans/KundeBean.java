@@ -1,4 +1,4 @@
-package de.auktionen.beans;
+package de.auktionen.auktionsprozess.beans;
 
 import java.io.Serializable;
 

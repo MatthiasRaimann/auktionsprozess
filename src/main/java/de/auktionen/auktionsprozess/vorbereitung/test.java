@@ -1,4 +1,4 @@
-package de.auktionen.vorbereitung;
+package de.auktionen.auktionsprozess.vorbereitung;
 
 public class test {
 

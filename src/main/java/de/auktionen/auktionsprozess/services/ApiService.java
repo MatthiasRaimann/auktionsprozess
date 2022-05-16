@@ -1,4 +1,4 @@
-package de.auktionen.services;
+package de.auktionen.auktionsprozess.services;
 
 import java.io.IOException;
 import java.io.OutputStream;
