@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1y3za2r" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1y3za2r" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
   <bpmn:collaboration id="Collaboration_1mjncjh">
     <bpmn:participant id="Participant_007w5e0" name="Auktionsprozess" processRef="Process_1c3wbat" />
-    <bpmn:participant id="Participant_0lc5v1c" name="Kunde" />
+    <bpmn:participant id="Participant_0lc5v1c" name="Bieter" />
     <bpmn:messageFlow id="Flow_0nf0hkq" sourceRef="Event_0ijtp3i" targetRef="Participant_0lc5v1c" />
     <bpmn:messageFlow id="Flow_1hiafzr" sourceRef="Activity_05tykic" targetRef="Participant_0lc5v1c" />
   </bpmn:collaboration>

@@ -1,4 +1,4 @@
-package de.auktionen.abwicklung;
+package de.auktionen.auktionsprozess.abwicklung;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,24 +11,28 @@ import org.camunda.bpm.engine.runtime.MessageCorrelationResult;
 import org.camunda.bpm.engine.runtime.MessageCorrelationResultType;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 
-import de.auktionen.auktionsprozess.auktionsabwicklung.AbwicklungsVartibleNames;
-
+/**
+ * 
+ * @author Merlin
+ * @see Implementierung der Aufgabe
+ *      "Versandtbestaetigung fuer den Artikel an den Bieter senden".
+ */
 public class VersandtbestaetigungSenden implements JavaDelegate {
 
 	@Override
 	public void execute(DelegateExecution execution) throws Exception {
-		String attribute1 = (String) execution.getVariable(AbwicklungsVartibleNames.attribute1name);
-		String attribute2 = (String) execution.getVariable(AbwicklungsVartibleNames.attribute2name);
-		String attribute3 = (String) execution.getVariable(AbwicklungsVartibleNames.attribute3name);
+		String attribute1 = (String) execution.getVariable("");
+		String attribute2 = (String) execution.getVariable("");
+		String attribute3 = (String) execution.getVariable("");
 
 		Map<String, Object> data = new HashMap<String, Object>();
-		data.put(AbwicklungsVartibleNames.attribute1name, attribute1);
-		data.put(AbwicklungsVartibleNames.attribute2name, attribute2);
-		data.put(AbwicklungsVartibleNames.attribute3name, attribute3);
+		data.put("", attribute1);
+		data.put("", attribute2);
+		data.put("", attribute3);
 
 		RuntimeService runtimeService = execution.getProcessEngineServices().getRuntimeService();
-		MessageCorrelationResult mcresult = runtimeService.createMessageCorrelation(messageCorrelation)
-				.processInstanceVariableEquals(AbwicklungsVartibleNames.attribute1name, attribute1).setVariables(data).correlateWithResult();
+		MessageCorrelationResult mcresult = runtimeService.createMessageCorrelation("")
+				.processInstanceVariableEquals("", attribute1).setVariables(data).correlateWithResult();
 		if (mcresult.getResultType() == MessageCorrelationResultType.Execution) {
 			Execution exec = mcresult.getExecution();
 			System.out.println(
@@ -38,7 +42,7 @@ public class VersandtbestaetigungSenden implements JavaDelegate {
 			System.out.println("New process with ProcessInstanceId " + processInstance.getRootProcessInstanceId()
 					+ " was started!");
 		}
-		
+
 	}
-	
+
 }
