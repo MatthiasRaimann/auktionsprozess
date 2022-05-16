@@ -1,5 +1,5 @@
 package de.auktionen.beans;
 
-public class test {
+public enum Abnutzung {
 
 }

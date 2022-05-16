@@ -1,4 +1,4 @@
-package de.auktionen.auktionsprozess.auktionsabwicklung;
+package de.auktionen.abwicklung;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,14 +11,9 @@ import org.camunda.bpm.engine.runtime.MessageCorrelationResult;
 import org.camunda.bpm.engine.runtime.MessageCorrelationResultType;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 
-/**
- * 
- * @author Merlin
- *
- */
-public class SendShippingConfirmation implements JavaDelegate {
+import de.auktionen.auktionsprozess.auktionsabwicklung.AbwicklungsVartibleNames;
 
-	public static final String messageCorrelation = "ArtikelVersandtNachricht";
+public class VersandtbestaetigungSenden implements JavaDelegate {
 
 	@Override
 	public void execute(DelegateExecution execution) throws Exception {
@@ -43,6 +38,7 @@ public class SendShippingConfirmation implements JavaDelegate {
 			System.out.println("New process with ProcessInstanceId " + processInstance.getRootProcessInstanceId()
 					+ " was started!");
 		}
+		
 	}
-
+	
 }
