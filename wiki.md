@@ -9,4 +9,4 @@
 - Anbieter
 - Abnehmer
 - Artikel
-Globale Variablen müssen in die ´Call Aktivities´ **rein** und **raus** gemapped werden.
+Globale Variablen müssen in die `Call Aktivities` **rein** und **raus** gemapped werden.
