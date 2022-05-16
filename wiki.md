@@ -7,8 +7,11 @@
 
 ## Ordnerstruktur `src/main/java/de/auktionen/auktionsprozess/..`
 `./beans`
+
 `./vorbereitung`
+
 `./auktion`
+
 `./abwicklung`
 
 
