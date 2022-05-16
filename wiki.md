@@ -8,7 +8,7 @@
 ## Ordnerstruktur `src/main/java/de/auktionen/auktionsprozess/..`
 - beans
 - vorbereitung
-- vertrieb
+- auktion
 - abwicklung
 
 
