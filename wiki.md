@@ -23,7 +23,7 @@ public class KundeBean implements Serializable {
 }
 ```
 ```java
-public class Artikel implements Serializable {
+public class ArtikelBean implements Serializable {
     
     int anr;
     int neukaufpreis;
