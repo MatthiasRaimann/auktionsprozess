@@ -6,7 +6,6 @@
 - Java EE Konventionen beachten
 
 ## Ordnerstruktur `src/main/java/de/auktionen/auktionsprozess/..`
-
 - beans
 - vorbereitung
 - vertrieb
@@ -15,8 +14,8 @@
 
 ## Globale Variablen
 - Globale Variablen müssen in die `Call Aktivities` **rein** und **raus** gemapped werden
-### Beans
 
+### Beans
 ```java
 public class KundeBean implements Serializable {
   
