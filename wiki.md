@@ -8,6 +8,25 @@
 ## Globale Variablen
 - Globale Variablen müssen in die `Call Aktivities` **rein** und **raus** gemapped werden
 ### Beans
-- `AnbieterBean`
-- `AbnehmerBean`
-- `ArtikelBean`
+``java
+public class KundeBean {
+  
+  int knr;
+  String namen;
+  String iban;
+  String email;
+  String strasse;
+  int hausnummer;
+  String plz;
+  String ort;
+  
+}
+``
+``java
+public class Artikel {
+    
+    int anr;
+    
+  
+}
+``
