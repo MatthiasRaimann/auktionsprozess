@@ -8,7 +8,7 @@
 ## Globale Variablen
 - Globale Variablen müssen in die `Call Aktivities` **rein** und **raus** gemapped werden
 ### Beans
-``java
+```java
 public class KundeBean implements Serializable {
   
   int knr;
@@ -21,8 +21,8 @@ public class KundeBean implements Serializable {
   String ort;
   
 }
-``
-``java
+```
+```java
 public class Artikel implements Serializable {
     
     int anr;
@@ -36,4 +36,4 @@ public class Artikel implements Serializable {
 public enum Abnutzung { 
 
 }
-``
+```
