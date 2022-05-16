@@ -6,10 +6,10 @@
 - Java EE Konventionen beachten
 
 ## Ordnerstruktur `src/main/java/de/auktionen/auktionsprozess/..`
-- beans
-- vorbereitung
-- auktion
-- abwicklung
+`./beans`
+`./vorbereitung`
+`./auktion`
+`./abwicklung`
 
 
 ## Globale Variablen
